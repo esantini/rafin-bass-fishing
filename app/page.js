@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
@@ -8,6 +7,17 @@ import Gallery from '../components/Gallery';
 import Faq from '../components/Faq';
 import Booking from '../components/Booking';
 import styles from '../styles/Home.module.css';
+
+export const metadata = {
+  title: 'RAFIN BASS FISHING GUIDES',
+  icon: '/favicon.ico',
+  keywords: 'bass, fishing, oviachic, rafin, Guides, Bass fishing guides, Oviachic lake, Fishing in mexico, Black bass, Large mouth bass, Presa el oviachic, Lobina, Lobina negra, Pesca deportiva, fishing guides, come and live it, obregon, sonora, mexico',
+  description: 'Rafin Bass Fishing Guides At El Oviachic is a friends trip kind, based on in-town food, great fishing days and having a great time.',
+}
+export const viewport = {
+  width: 'device-width',
+  initialScale: '0.6',
+}
 
 function Home() {
   return (
@@ -24,14 +34,6 @@ function Home() {
           alt="Rafin Bass Fishing Background"
         />
       </div>
-      <Head>
-        <title>RAFIN BASS FISHING GUIDES</title>
-        <meta name="description" content="COME AND LIVE IT" />
-        <meta name="viewport" content="width=device-width, initial-scale=0.6" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="Description" content="Rafin Bass Fishing Guides At El Oviachic is a friends trip kind, based on in-town food, great fishing days and having a great time." />
-        <meta name="Keywords" content="bass, fishing, oviachic, rafin, Guides, Bass fishing guides, Oviachic lake, Fishing in mexico, Black bass, Large mouth bass, Presa el oviachic, Lobina, Lobina negra, Pesca deportiva, fishing guides, come and live it, obregon, sonora, mexico" />
-      </Head>
 
       <NavBar />
 
