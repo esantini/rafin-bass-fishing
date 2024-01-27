@@ -17,13 +17,13 @@ export default function Faq() {
               <p>One or two persons... 3rd person costs extra</p>
               <p>You will have to get to the lake by yourself.</p>
               <p>Transportation, alcoholic beverages and tips not included</p>
-              <p>Includes:<br />Profesional Guide, Food, drinks and tackle.</p>
+              <p>Includes:<br />professional Guide, Food, drinks and tackle.</p>
             </dd>
             <dt>2.-ALL INCLUDED</dt>
             <dd>
               <p>We have this fun and exciting deal</p>
 
-              <p>3 days of fishing, for one or two people where you are just going to relax and let us do almost everything for you. We&apos;ll put you right on the good fishing spots, we are going to eat really well on the boat and in the city ( we are hitting the best taco stands and mexican food locals) you&apos;ll get to know Cd Obregon&apos;s best places not just the lake.</p>
+              <p>3 days of fishing, for one or two people where you are just going to relax and let us do almost everything for you. We&apos;ll put you right on the good fishing spots, we are going to eat really well on the boat and in the city (we are hitting the best taco stands and mexican food locals) you&apos;ll get to know Cd Obregon&apos;s best places not just the lake.</p>
               <br />
               <p>Includes:</p>
               <p>3 days of fishing</p>
@@ -70,15 +70,15 @@ export default function Faq() {
           <p>This package does not include transportation, alcoholic beverages or tips for guides.</p>
           <br />
           <p>If you choose <strong>ALL INCLUDED</strong>:</p>
-          <p>We will povide everything for you, in whatever way you come into town we&apos;ll have ready transportation to the hotel, lake and places where we are going to have dinner everyday.</p>
-          <p>Acomodatons will be either Best Western hotel or Cityexpress hotel both in the entrance of the city just in the way to the lake EL OVIACHIC.</p>
+          <p>We will provide everything for you, in whatever way you come into town we&apos;ll have ready transportation to the hotel, lake and places where we are going to have dinner everyday.</p>
+          <p>accommodations will be either Best Western hotel or Cityexpress hotel both in the entrance of the city just in the way to the lake EL OVIACHIC.</p>
 
           <h3>DO WE NEED FISHING PERMITS?</h3>
           <p>Fishing permits? yes, we all have to get one.</p>
           <p>Don&apos;t worry, I will take care of that, it&apos;s included on the guides services, just got mine, lets go fishing!</p>
 
           <h3>WHAT SHOULD I BRING WITH ME?</h3>
-          <p>These trips are very friendly and are as if you are fishing in your own town lake, so what we recomend to bring is everything you can to protect yourself from the sun, hat, sunscreen, gloves, rain suit, etc.</p>
+          <p>These trips are very friendly and are as if you are fishing in your own town lake, so what we recommend to bring is everything you can to protect yourself from the sun, hat, sunscreen, gloves, rain suit, etc.</p>
           <p>If you have your own tackle, your welcome to bring it, if not we will provide it for you.</p>
 
           <h3>DO WE NEED CAR INSURANCE?</h3>
@@ -98,12 +98,13 @@ export default function Faq() {
           <p>El Oviachic lake is 25 miles north of Cd Obregon, Sonora, Mexico, the city where we will be accommodated to go fishing.</p>
           <p>The distance between Nogales and Cd. Obregon is 328 miles, Highway 15.</p>
           <p>If you are driving, you&apos;ll have to get car permits and visa at km 21 office. You can get the car permit online also at banjercito.com but you&apos;ll have to stop on the 21 km to get the visa. Car permit is $50.00 USD.</p>
-          <p>Cd Obregon has an International Airport also Airport code: CEN). You can fly down here, just ask Aeromexico and a round trip Phoenix-Obregon cost around $900.00 USD. or to nearby city Hermosillo (airport code: HMO), ~$550.00usd and then take the bus right at the airport to Ciudad Obregon.</p>
+          <p>Cd Obregon has an International Airport also Airport code: CEN. You can fly down here, just ask Aeromexico and a round trip Phoenix-Obregon cost around $900.00 USD. or to nearby city Hermosillo (airport code: HMO), ~$550.00usd and then take the bus right at the airport to Ciudad Obregon.</p>
           <br />
-          <p>Just spoke to TUFESA BUS LINE USA general manager Arturo Monje,</p>
-          <p>he told me that a round trip Phoenix- Obregon ( where i am picking you up) is just $178.00 USD, that is a special bus that only have 3 seats per row and is a 11 hrs trip.</p>
-          <p>Also he says that you can bring 3 bags, clothes, tackle and rods on the bus, the bus is going to stop at the crossing line USA- Mexico to check the bags of the passangers and american citizens have to get a permit to get in to mexico ( please to tell the driver ) it&apos;s free for less than 7 days. He is a close friend of mine and told me if you want more info to e mail him at arturomonje@hotmail.com he knows all the answers to get here.<br />
-          </p>
+
+          <p>If you're considering a bus trip, you can opt for a round-trip Phoenix-Obregon journey. The ticket cost is approximately $200.00 USD. This journey is on a comfortable bus with only 3 seats per row, ensuring a more spacious travel experience. The total duration of the trip is around 11 hours.</p>
+          <p>You're allowed to bring up to 3 bags, including clothes, fishing tackle, and rods. Please note that there will be a baggage check at the USA-Mexico border, and American citizens will need to obtain a permit for entering Mexico. This permit is free for stays under 7 days. Be sure to inform the bus driver about your need for a permit.</p>
+          <p>For further details or specific queries, we recommend contacting the bus line directly. They can provide comprehensive and up-to-date information to ensure a smooth journey to Obregon.</p>
+
           <br />
           <p>By the way, TUFESA is the best bus company around</p>
         </div>
