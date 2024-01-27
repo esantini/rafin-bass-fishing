@@ -89,7 +89,7 @@ export default function Faq() {
           </p>
           <p>Please have all info in hand so you can call me anytime, be glad to help.</p>
           <p>Rafael Osuna Gallardo</p>
-          <p>mx cell +52 1 (644) 998-8783</p>
+          <p>Mx cell +52 1 (644) 998-8783</p>
 
           <h3>DO WE NEED A USA PASSPORT?</h3>
           <p>YES. You&acute;ll need it to get a Mexican visa and get back to USA.</p>
