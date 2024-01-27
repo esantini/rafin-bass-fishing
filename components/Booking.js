@@ -11,6 +11,7 @@ const getFormMessage = status => {
   let message;
   if (status === 'sending') message = <h3>Sending...</h3>;
   else if (status === 'sent') message = <h3>Gracias!<br />I&apos;ll get back to you as soon as I can</h3>;
+  else if (status === 'error') return null;
   if (!message) return null;
   return <div className={styles.sending}>{message}</div>;
 }
@@ -44,10 +45,14 @@ export default function Booking() {
         'Content-Type': 'application/json'
       },
       method: 'POST'
-    }).then(
-      () => setStatus('sent')
-    ).catch(err => {
-      console.err(err);
+    }).then(({ status }) => {
+      if (status !== 200) {
+        setStatus('error');
+        throw new Error('Error sending message');
+      }
+      setStatus('sent');
+    }).catch(err => {
+      console.error(err);
       setStatus('error');
     });
   }
@@ -65,7 +70,7 @@ export default function Booking() {
 
         <dl>
           <dt>Rafin Bass Fishing Guides at el Oviachic</dt>
-          <dd><strong>Phone:</strong> +52 1 (644) 998-8783</dd>
+          <dd><strong>Phone:</strong> +52 (644) 998-8783</dd>
           <dd><strong>Address:</strong> Jalisco 950 Sur, Ciudad Obreg&oacute;n, Sonora, M&eacute;xico</dd>
           <dd><strong>Email:</strong> raosga@hotmail.com</dd>
         </dl>
@@ -105,9 +110,19 @@ export default function Booking() {
                 <input name="phone" type="tel" className={styles.bookingInput} id="phone" placeholder='Phone' autoComplete="phone" />
                 <textarea name="message" className={styles.bookingInput} id="message" placeholder='Your Comments or Questions' required={subject === "Message"} />
 
-                <div>
-                  <input type='submit' name='submit' value='send' className="active" />
-                </div>
+                {status === 'error' ? (<>
+                  <h3 style={{ marginBottom: 0 }}>Oops! Something went wrong.</h3>
+                  <h4 style={{ marginTop: 0 }}>Feel free to email me at{' '}
+                    <a style={{ color: '#d4882c' }} href="mailto:raosga@hotmail.com">raosga@hotmail.com</a>,
+                    call, or text me at{' '}
+                    <span style={{ color: '#d4882c' }}>+52 (644) 998-8783</span>.<br />
+                    Looking forward to hearing from you!
+                  </h4>
+                </>) : (
+                  <div>
+                    <input type='submit' name='submit' value='send' className="active" />
+                  </div>
+                )}
               </div>
 
             </div>
