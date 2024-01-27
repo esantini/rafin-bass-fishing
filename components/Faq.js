@@ -101,8 +101,8 @@ export default function Faq() {
           <p>Cd Obregon has an International Airport also Airport code: CEN. You can fly down here, just ask Aeromexico and a round trip Phoenix-Obregon cost around $900.00 USD. or to nearby city Hermosillo (airport code: HMO), ~$550.00usd and then take the bus right at the airport to Ciudad Obregon.</p>
           <br />
 
-          <p>If you're considering a bus trip, you can opt for a round-trip Phoenix-Obregon journey. The ticket cost is approximately $200.00 USD. This journey is on a comfortable bus with only 3 seats per row, ensuring a more spacious travel experience. The total duration of the trip is around 11 hours.</p>
-          <p>You're allowed to bring up to 3 bags, including clothes, fishing tackle, and rods. Please note that there will be a baggage check at the USA-Mexico border, and American citizens will need to obtain a permit for entering Mexico. This permit is free for stays under 7 days. Be sure to inform the bus driver about your need for a permit.</p>
+          <p>If you&apos;re considering a bus trip, you can opt for a round-trip Phoenix-Obregon journey. The ticket cost is approximately $200.00 USD. This journey is on a comfortable bus with only 3 seats per row, ensuring a more spacious travel experience. The total duration of the trip is around 11 hours.</p>
+          <p>You&apos;re allowed to bring up to 3 bags, including clothes, fishing tackle, and rods. Please note that there will be a baggage check at the USA-Mexico border, and American citizens will need to obtain a permit for entering Mexico. This permit is free for stays under 7 days. Be sure to inform the bus driver about your need for a permit.</p>
           <p>For further details or specific queries, we recommend contacting the bus line directly. They can provide comprehensive and up-to-date information to ensure a smooth journey to Obregon.</p>
 
           <br />
