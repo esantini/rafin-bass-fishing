@@ -2,11 +2,11 @@
 
 import { useState, useCallback, useEffect } from 'react';
 
-import GridGallery from 'react-photo-gallery';
+import PhotoAlbum from 'react-photo-album';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
 
-export default function Gallery({ images }) {
+export default function Gallery({ images = [] }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -29,7 +29,7 @@ export default function Gallery({ images }) {
     }
   }, [keyEvent]);
 
-  const openCarousel = useCallback((event, { photo, index }) => {
+  const openCarousel = useCallback(({ index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
     neutralizeBack(closeCarousel);
@@ -53,9 +53,9 @@ export default function Gallery({ images }) {
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
       <div className={styles.images}>
-        <GridGallery photos={images ? images : []} onClick={openCarousel} />
+        <PhotoAlbum layout="rows" photos={images} onClick={openCarousel} />
       </div>
-      {viewerIsOpen && <Carousel images={images ? images : []} startIndex={currentImage} />}
+      {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
     </section>
   );
 }

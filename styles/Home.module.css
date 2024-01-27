@@ -229,13 +229,16 @@ section.facebook {
 
 .gallery .images {
   padding: 20px 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .gallery .imageWrap {
   margin: 5px;
+}
+
+.gallery .carouselImage img {
+  width: min-content !important;
+  transform: translate(-50%, 0);
+  left: 50% !important;
 }
 
 .faq {

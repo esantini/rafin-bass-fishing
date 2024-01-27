@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useEmblaCarousel } from "embla-carousel/react";
 import Image from 'next/image';
 import { Thumb } from "./EmblaCarouselThumb";
+import styles from '../styles/Home.module.css';
 
 const Carousel = ({ images, startIndex = 0 }) => {
   const [selectedIndex, setSelectedIndex] = useState(startIndex);
@@ -51,7 +52,7 @@ const Carousel = ({ images, startIndex = 0 }) => {
           <div className="embla__container">
             {images.map((img, index) => (
               <div className="embla__slide" key={index}>
-                <div className="embla__slide__inner">
+                <div className={`embla__slide__inner ${styles.carouselImage}`}>
                   <Image
                     className="embla__slide__img"
                     src={img.src}
