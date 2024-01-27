@@ -235,12 +235,6 @@ section.facebook {
   margin: 5px;
 }
 
-.gallery .carouselImage img {
-  width: min-content !important;
-  transform: translate(-50%, 0);
-  left: 50% !important;
-}
-
 .faq {
   background: #414141 url(/bg_faq.jpg) center center repeat;
   color: #fff;

@@ -52,13 +52,21 @@ const Carousel = ({ images, startIndex = 0 }) => {
           <div className="embla__container">
             {images.map((img, index) => (
               <div className="embla__slide" key={index}>
-                <div className={`embla__slide__inner ${styles.carouselImage}`}>
+                <div className="embla__slide__inner">
                   <Image
                     className="embla__slide__img"
                     src={img.src}
                     alt="Fishing bass at Lake Oviachic with Rafin, Amigo Style!"
-                    fill
                     styles={{ objectFit: "contain" }}
+                    width={img.width}
+                    height={img.height}
+                    style={{
+                      width: 'auto',
+                      height: '100%',
+                      position: 'absolute',
+                      transform: 'translateX(-50%)',
+                      left: '50%',
+                    }}
                   />
                 </div>
               </div>
@@ -74,7 +82,7 @@ const Carousel = ({ images, startIndex = 0 }) => {
               <Thumb
                 onClick={() => onThumbClick(index)}
                 selected={index === selectedIndex}
-                imgSrc={img.src}
+                img={img}
                 key={index}
               />
             ))}
