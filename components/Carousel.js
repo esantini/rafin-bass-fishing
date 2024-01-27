@@ -56,8 +56,8 @@ const Carousel = ({ images, startIndex = 0 }) => {
                     className="embla__slide__img"
                     src={img.src}
                     alt="Fishing bass at Lake Oviachic with Rafin, Amigo Style!"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
+                    styles={{ objectFit: "contain" }}
                   />
                 </div>
               </div>

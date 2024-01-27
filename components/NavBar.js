@@ -10,6 +10,7 @@ export default function NavBar() {
         width={93}
         border="0"
         alt="Rafin Bass Fishing Logo"
+        priority={true}
       />
 
       <Menu />
