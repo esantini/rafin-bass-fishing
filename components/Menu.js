@@ -54,7 +54,7 @@ const Menu = () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', setAnchorPoints);
     }
-  }, []);
+  }, [setAnchorPoints, handleScroll]);
 
   return (
     <ul className="nav_list">

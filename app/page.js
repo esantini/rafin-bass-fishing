@@ -15,10 +15,12 @@ function Home() {
       <div className="main-bg">
         <Image
           src="/bg.jpg"
-          layout="fill"
+          fill
           className="main-bg"
-          objectFit="cover"
-          objectPosition="top"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'top'
+          }}
           alt="Rafin Bass Fishing Background"
         />
       </div>

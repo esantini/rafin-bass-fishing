@@ -6,7 +6,7 @@ import GridGallery from 'react-photo-gallery';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
 
-export default function Gallery({ images = [] }) {
+export default function Gallery({ images }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -53,23 +53,23 @@ export default function Gallery({ images = [] }) {
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
       <div className={styles.images}>
-        <GridGallery photos={images} onClick={openCarousel} />
+        <GridGallery photos={images ? images : []} onClick={openCarousel} />
       </div>
-      {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
+      {viewerIsOpen && <Carousel images={images ? images : []} startIndex={currentImage} />}
     </section>
   );
 }
 
-import imagesData from '../imagesData.json';
-// This function gets called at build time
-export async function getStaticProps() {
-  imagesData.splice(30);
+// import imagesData from '../imagesData.json';
+// // This function gets called at build time
+// export async function getStaticProps() {
+//   imagesData.splice(30);
 
-  // By returning { props: { images } }, the component
-  // will receive `images` as a prop at build time
-  return {
-    props: {
-      images: imagesData,
-    },
-  }
-}
+//   // By returning { props: { images } }, the component
+//   // will receive `images` as a prop at build time
+//   return {
+//     props: {
+//       images: imagesData,
+//     },
+//   }
+// }
