@@ -278,6 +278,7 @@ section.facebook {
 
 .booking form {
   position: relative;
+  padding-bottom: 100px;
 }
 
 .bookingInput {
@@ -489,4 +490,24 @@ section.facebook {
 
 .selectSubject input[type="radio"]:checked ~ label {
   color: #5aa1b7;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footerLink {
+  color: #d4882c;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #ff9a56;
 }

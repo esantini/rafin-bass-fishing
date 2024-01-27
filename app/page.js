@@ -6,6 +6,7 @@ import Location from '../components/Location';
 import Gallery from '../components/Gallery';
 import Faq from '../components/Faq';
 import Booking from '../components/Booking';
+import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 
 export const metadata = {
@@ -59,6 +60,8 @@ function Home() {
         <Faq />
 
         <Booking />
+
+        <Footer />
 
       </main>
 
