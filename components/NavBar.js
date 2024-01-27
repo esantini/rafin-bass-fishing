@@ -6,8 +6,8 @@ export default function NavBar() {
     <nav className="nav">
       <Image
         src="/l_rbfgao_wh90.png"
-        height="90px"
-        width="93px"
+        height={90}
+        width={93}
         border="0"
         alt="Rafin Bass Fishing Logo"
       />

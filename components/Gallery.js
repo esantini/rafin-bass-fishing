@@ -1,10 +1,12 @@
+'use client';
+
 import { useState, useCallback, useEffect } from 'react';
 
 import GridGallery from 'react-photo-gallery';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
 
-export default function Gallery({ images }) {
+export default function Gallery({ images = [] }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -56,4 +58,18 @@ export default function Gallery({ images }) {
       {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
     </section>
   );
+}
+
+import imagesData from '../imagesData.json';
+// This function gets called at build time
+export async function getStaticProps() {
+  imagesData.splice(30);
+
+  // By returning { props: { images } }, the component
+  // will receive `images` as a prop at build time
+  return {
+    props: {
+      images: imagesData,
+    },
+  }
 }

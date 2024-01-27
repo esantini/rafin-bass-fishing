@@ -9,7 +9,7 @@ import Faq from '../components/Faq';
 import Booking from '../components/Booking';
 import styles from '../styles/Home.module.css';
 
-function Home({ images }) {
+function Home() {
   return (
     <div className={styles.container} id="root">
       <div className="main-bg">
@@ -50,7 +50,7 @@ function Home({ images }) {
 
         <Location />
 
-        <Gallery images={images} />
+        <Gallery />
 
         <Faq />
 
@@ -61,20 +61,6 @@ function Home({ images }) {
       <div id="fb-root"></div>
     </div>
   )
-}
-
-import imagesData from '../imagesData.json';
-// This function gets called at build time
-export async function getStaticProps() {
-  imagesData.splice(30);
-
-  // By returning { props: { images } }, the component
-  // will receive `images` as a prop at build time
-  return {
-    props: {
-      images: imagesData,
-    },
-  }
 }
 
 export default Home;

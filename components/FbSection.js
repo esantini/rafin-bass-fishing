@@ -14,7 +14,7 @@ export default function FbSection() {
           target='_blank'
           rel='noreferrer'
         >
-          <Image alt='facebook logo' src='/l_fb.png' width='26px' height='26px' />
+          <Image alt='facebook logo' src='/l_fb.png' width={26} height={26} />
           <label>
             JOIN US!
           </label>
