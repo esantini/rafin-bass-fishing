@@ -21,9 +21,9 @@ export default function FbSection() {
             height={26}
             style={{ width: 'auto' }}
           />
-          <label>
+          <span>
             JOIN US!
-          </label>
+          </span>
         </a>
       </div>
       <div

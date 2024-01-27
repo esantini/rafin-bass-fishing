@@ -100,9 +100,9 @@ export default function Booking() {
 
               <div className={styles.textFields}>
 
-                <input name="name" type="text" className={styles.bookingInput} id="name" placeholder='Your name' required />
-                <input name="email" type="email" className={styles.bookingInput} id="email" placeholder='E-Mail' required />
-                <input name="phone" type="tel" className={styles.bookingInput} id="phone" placeholder='Phone' />
+                <input name="name" type="text" className={styles.bookingInput} id="name" placeholder='Your name' required autoComplete="name" />
+                <input name="email" type="email" className={styles.bookingInput} id="email" placeholder='E-Mail' required autoComplete="email" />
+                <input name="phone" type="tel" className={styles.bookingInput} id="phone" placeholder='Phone' autoComplete="phone" />
                 <textarea name="message" className={styles.bookingInput} id="message" placeholder='Your Comments or Questions' required={subject === "Message"} />
 
                 <div>
