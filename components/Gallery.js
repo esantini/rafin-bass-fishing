@@ -5,8 +5,14 @@ import { useState, useCallback, useEffect } from 'react';
 import PhotoAlbum from 'react-photo-album';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
+import jsonImages from '../imagesData.json';
 
-export default function Gallery({ images = [] }) {
+const hcImages = jsonImages.map((image) => ({
+  ...image,
+  alt: "Fishing bass at Lake Oviachic with Rafin, Amigo Style!"
+}));
+
+export default function Gallery() {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -53,23 +59,9 @@ export default function Gallery({ images = [] }) {
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
       <div className={styles.images}>
-        <PhotoAlbum layout="rows" photos={images} onClick={openCarousel} />
+        <PhotoAlbum layout="rows" photos={hcImages} onClick={openCarousel} />
       </div>
-      {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
+      {viewerIsOpen && <Carousel images={hcImages} startIndex={currentImage} />}
     </section>
   );
 }
-
-// import imagesData from '../imagesData.json';
-// // This function gets called at build time
-// export async function getStaticProps() {
-//   imagesData.splice(30);
-
-//   // By returning { props: { images } }, the component
-//   // will receive `images` as a prop at build time
-//   return {
-//     props: {
-//       images: imagesData,
-//     },
-//   }
-// }
