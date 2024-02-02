@@ -4,7 +4,6 @@
 import React from 'react';
 import { SessionProvider } from "next-auth/react";
 import { sql } from '@vercel/postgres';
-import { Analytics } from '@vercel/analytics/react';
 
 const init = async () => {
   try {
@@ -31,7 +30,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
       <Component {...pageProps} />
-      <Analytics />
     </SessionProvider>
   );
 }

@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Image from 'next/image';
 import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
@@ -66,6 +67,8 @@ function Home() {
       </main>
 
       <div id="fb-root"></div>
+
+      <Analytics />
     </div>
   )
 }
