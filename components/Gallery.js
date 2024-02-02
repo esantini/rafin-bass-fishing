@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
-
 import PhotoAlbum from 'react-photo-album';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
@@ -15,6 +14,7 @@ const hcImages = jsonImages.map((image) => ({
 export default function Gallery() {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [images, setImages] = useState(hcImages);
 
   const closeCarousel = useCallback(() => {
     setCurrentImage(0);
@@ -25,6 +25,18 @@ export default function Gallery() {
   const keyEvent = useCallback(({ key, target }) => {
     if (key === "Escape" || target.id === 'carousel') closeCarousel();
   }, [closeCarousel]);
+
+  useEffect(() => {
+    fetch('/api/gallery')
+      .then((res) => res.json())
+      .then((images) => {
+        if (images.length) {
+          setImages(images);
+        }
+      }).catch((err) => {
+        console.error('Error fetching images', err);
+      });
+  }, [setImages]);
 
   useEffect(() => {
     window.addEventListener("keydown", keyEvent);
@@ -59,9 +71,9 @@ export default function Gallery() {
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
       <div className={styles.images}>
-        <PhotoAlbum layout="rows" photos={hcImages} onClick={openCarousel} />
+        <PhotoAlbum layout="rows" photos={images} onClick={openCarousel} />
       </div>
-      {viewerIsOpen && <Carousel images={hcImages} startIndex={currentImage} />}
+      {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
     </section>
   );
 }

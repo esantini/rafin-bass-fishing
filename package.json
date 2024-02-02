@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/postgres": "^0.7.2",
     "embla-carousel": "^4.5.3",
     "inline-css": "^4.0.2",
     "mailgun-js": "^0.22.0",
