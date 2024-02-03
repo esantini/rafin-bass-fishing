@@ -11,7 +11,7 @@ const initDb = async () => {
       CREATE TABLE IF NOT EXISTS whitelist
         ( email VARCHAR(255) );
     `;
-    console.log({ res }, 'Whitelist Table Created Successfully!');
+    console.log('Whitelist Table Created Successfully!');
   } catch (e) {
     console.error('Error Creating whitelist Table', e);
   }
@@ -21,7 +21,7 @@ const initDb = async () => {
       CREATE TABLE IF NOT EXISTS gallery
         ( id SERIAL PRIMARY KEY, src VARCHAR(255), width INT, height INT );
     `;
-    console.log({ res }, 'Gallery Table Created Successfully!');
+    console.log('Gallery Table Created Successfully!');
   } catch (e) {
     console.error('Error Creating Gallery Table', e);
   }
