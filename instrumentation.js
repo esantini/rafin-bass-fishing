@@ -7,20 +7,23 @@ export function register() {
 
 const initDb = async () => {
   try {
-    await sql`
+    const res = await sql`
       CREATE TABLE IF NOT EXISTS whitelist
         ( email VARCHAR(255) );
-      `;
+    `;
+    console.log({ res }, 'Whitelist Table Created Successfully!');
   } catch (e) {
-    console.log('Error Creating whitelist Table', e);
+    console.error('Error Creating whitelist Table', e);
   }
+
   try {
-    await sql`
+    const res = await sql`
       CREATE TABLE IF NOT EXISTS gallery
         ( id SERIAL PRIMARY KEY, src VARCHAR(255), width INT, height INT );
-      `;
+    `;
+    console.log({ res }, 'Gallery Table Created Successfully!');
   } catch (e) {
-    console.log('Error Creating Gallery Table', e);
+    console.error('Error Creating Gallery Table', e);
   }
-  console.log('Tables Created Successfully!');
-}
+};
+
